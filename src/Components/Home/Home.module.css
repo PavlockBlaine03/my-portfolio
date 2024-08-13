@@ -1,0 +1,89 @@
+.main {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.head {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    position: relative;
+    max-width: 100%;
+    white-space: nowrap;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.head::after, .head::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), #ff7575, #a0ffa0, #2828ff, #ff6767);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    padding: 2px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+}
+.head::before {
+    filter: blur(1.5em);
+    opacity: 0.5;
+}
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+}
+
+h3 {
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+.textcard {
+    background-color: black;
+    text-align: left;
+    padding: 1px 5px;
+    margin-left: 15px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.textcard::after, .textcard::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), black, grey, white);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    padding: 2px;
+    border-radius: 5px;
+    animation: 6s spin linear infinite;
+}
+.textcard::before {
+    filter: blur(1em);
+    opacity: 0.8;
+}
+
+p {
+    text-align: center;
+}
