@@ -8,7 +8,7 @@ body {
 }
 
 .title {
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     background: black;
@@ -54,7 +54,7 @@ body {
 }
 
 .navList {
-    display: inline-block;
+    display: block;
     color: white;
     list-style-type: none;
     padding: 0;
@@ -91,4 +91,8 @@ hr {
     width: 100%;
     border-color: black;
     border-radius: 5px;
+}
+a {
+    text-decoration: none;
+    color: white;
 }

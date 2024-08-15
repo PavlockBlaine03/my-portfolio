@@ -1,4 +1,6 @@
 import styles from './Home.module.css'
+import twlimage from '../../assets/images/thomaswaslate.png'
+import tbbimage from '../../assets/images/TheBlackBook.png'
 
 function Home() {
     return(
@@ -25,7 +27,14 @@ function Home() {
                 <hr></hr>
                 <div className={styles.exampleProjs}>
                     <h2 className={styles.head}>Projects</h2>
-                    
+                    <img className={styles.twlimage} src={twlimage} alt='thomas was late'></img>
+                    <div className={styles.textcard}>
+                        <p>fill in here</p>
+                    </div>
+                    <img className={styles.twlimage} src={tbbimage} alt='thomas was late'></img>
+                    <div className={styles.textcard}>
+                        <p>fill in here</p>
+                    </div>
                 </div>
             </div>
         </>
