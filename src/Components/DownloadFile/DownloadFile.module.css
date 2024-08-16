@@ -1,0 +1,56 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+.header h2 {
+    background-color: black;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.header h2::after, .header h2::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), #ff7575, #a0ffa0, #2828ff, #ff6767);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    padding: 2px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+}
+.header h2::before {
+    filter: blur(1.5em);
+    opacity: 0.5;
+}
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+}
+
+.download {
+    color: white;
+    text-align: center;
+}
+
+.download a {
+    color:red;
+    font-style: italic;
+}

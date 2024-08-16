@@ -1,13 +1,13 @@
 import Header from "./Components/Header/Header.jsx"
 import Footer from "./Components/Footer/Footer.jsx";
-import Home from "./Components/Home/Home.jsx"
+import DownloadFile from "./Components/DownloadFile/DownloadFile.jsx";
 
 function ResumeApp() {
 
   return (
     <>
       <Header header='Resume'/>
-      
+        <DownloadFile/>
       <Footer/>
     </>
   );
